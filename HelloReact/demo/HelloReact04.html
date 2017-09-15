@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo04:组件</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<!--由于React使用的JSX语法和JavaScript不兼容,所以需要使用type-->
+<script type="text/babel">
+    var HelloMessage = React.createClass({
+        render: function () {
+            //组件类只能有一个顶层标签
+            return <h1>{this.props.manName} love {this.props.womanName}</h1>
+        }
+    })
+
+    ReactDOM.render(
+        //注意:自定义组件的class属性要写成className,for属性要写成htmlFor
+        <HelloMessage manName="jack" womanName="rose"/>,
+        document.getElementById("example")
+    );
+</script>
+</body>
+</html>

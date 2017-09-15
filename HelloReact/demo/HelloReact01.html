@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo01</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+<!--由于React使用的JSX语法和JavaScript不兼容,所以需要使用type-->
+<script type="text/babel">
+    ReactDOM.render(
+        <h1>Hello,World!</h1>,
+        document.getElementById("example")
+    );
+</script>
+</body>
+</html>
